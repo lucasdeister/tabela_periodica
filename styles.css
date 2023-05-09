@@ -1,0 +1,205 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*importação de fonte*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/tabela_periodica/font/Roboto_Mono/RobotoMono-VariableFont_wght.ttf');
+} 
+
+/*aplicação de background e seleção da fonte*/
+body{
+    background-image: url('/tabela_periodica/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: 70px 27px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*estilos de títulos e subtitulos*/
+
+h1, h2{
+    color: rgb(49, 47, 47);
+    font-weight: 800;
+} 
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.titulo{
+    margin-top: 30px;
+}
+
+.subtitulo_tipo{
+    margin-bottom: 30px;
+}
+
+/*containers*/
+
+.container_principal{
+    display: grid;
+    justify-content: center;
+    height: 800px;
+}
+
+.container{
+    display: grid;
+    position: relative;
+}
+
+.containerA{
+    grid-template-columns: repeat(1, 55px);
+    grid-template-rows: repeat(1, 60px);
+    max-width: 60px;
+}
+
+.containerB{
+    grid-template-columns: repeat(2, 55px);
+    grid-template-rows: repeat(6, 60px);
+    max-width: 110px;
+}
+
+.containerC{
+    grid-template-columns: repeat(1, 55px);
+    grid-template-rows: repeat(2, 60px);
+    top: -240px;
+    left: 110px;
+    max-width: 55px;
+}
+
+.containerD{
+    grid-template-columns: repeat(9, 55px);
+    grid-template-rows: repeat(4, 60px);
+    top: -360px;
+    left: 165px;
+    max-width: 497px;
+}
+
+.containerE{
+    grid-template-columns: repeat(6, 55px);
+    grid-template-rows: repeat(6, 60px);
+    top: -720px;
+    left: 660px;
+    max-width: 335px;
+}
+
+.containerF{
+    grid-template-columns: repeat(1, 55px);
+    grid-template-rows: repeat(1, 60px);
+    top: -1140px;
+    left: 935px;
+    max-width: 60px;
+}
+
+.containerG{
+    grid-template-columns: repeat(15, 55px);
+    grid-template-rows: repeat(2, 60px);
+    top: -760px;
+    left: 165px;
+    max-width: 830px;
+}
+
+.container_dados{
+    position: relative;
+    top: -570px;
+    left: 220px;
+    max-width: 350px;
+    visibility: hidden;
+}
+
+.container_tipos{
+    position: relative;
+    top: -120px;
+    left: 10px;
+}
+
+.lista_tipos{
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(2, 60px);
+    justify-content: space-around;
+}
+
+.container_lista{
+    width: 1000px;
+    max-height: 600px;
+}
+
+.container_lista .elemento{
+    border-radius: 5%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/*itens elementos*/
+
+.n_atomico{
+    margin-left: 2px;
+    font-size: 12px;
+}
+
+.simbolo{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+/*itens legenda*/
+
+.item_tipo{
+    display: flex;
+}
+
+.cor_tipo{
+    width: 20px;
+    height: 20px;
+}
+
+/*Cores da legenda e do grid de elementos*/
+
+.nMetal{background-color: rgb(181, 234, 81);}
+.gNobre{background-color: rgb(61, 158, 227);}
+.mAlcalino{background-color: rgb(241, 178, 0);}
+.mAlcalinoTerroso{background-color: rgb(234, 218, 0);}
+.semiMetais{background-color: rgb(77, 182, 172);}
+.halogenios{background-color: rgb(112, 203, 235);}
+.oMetais{background-color: rgb(162, 199, 211);}
+.mTransicao{background-color: rgb(228, 132, 132);}
+.lantanideos{background-color: rgb(94, 216, 42);}
+.actinidios{background-color: rgb(220, 173, 214);}
+
+/*efeitos cursor*/
+
+.elemento:hover{
+    cursor: pointer;
+    filter: brightness(200%);
+    filter: contrast(140%);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*estilos dos dados adicionais*/
+
+table{
+    border-collapse: collapse;
+    width: 350px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(227, 224, 224);
+}
+
+.descricao_tipo{
+    margin-left: 5px;
+}
+
+#nome_elemento, #simbolo_elemento, #numero_elemento, #massa_elemento, #configuracao_elemento{
+    text-align: center;
+}
